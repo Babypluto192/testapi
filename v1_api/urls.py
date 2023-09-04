@@ -1,5 +1,5 @@
 """
-URL configuration for damirsinbaapi project.
+URL configuration for v1_api project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -23,5 +23,9 @@ from damirsinba_api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/damirsinbachasti', DamirsinbaChastiView.as_view(), name='idc')
+    path('api/v1/damirsinbachasti', ChastiView.as_view(), name='idc'),
+    path('api/v1/damirsinbatrailers', TrailersiView.as_view(), name='idk'),
+    path('api/v1/damirsinbaspinoff', SpinOffView.as_view(), name='idl'),
+    path('api/v1/damirsinbafanati', FanatiView.as_view(), name='ido'),
+
 ]
